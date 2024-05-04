@@ -5,6 +5,9 @@ services:
     build: 
       context: .
       dockerfile: Dockerfile
+      args:
+        # 要使用別的版本修改這裡
+        VARIANT: 18-slim
 
     volumes:
       - ..:/workspace:cached
