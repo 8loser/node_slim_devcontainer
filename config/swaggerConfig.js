@@ -18,7 +18,7 @@ const swaggerOption = {
     baseDir: __dirname,
     // Glob pattern to find your jsdoc files (multiple patterns can be added in an array)
     // filesPattern: './**/*.js',
-    filesPattern: ['../routes/**/*.js'],
+    filesPattern: ['../routes/**/*.js', '../middlewares/ResponseStruct.js'],
     // URL where SwaggerUI will be rendered
     swaggerUIPath: '/docs',
     // Expose OpenAPI UI, 正式站不啟用

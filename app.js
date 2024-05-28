@@ -3,6 +3,7 @@ const cookieParser = require('cookie-parser');
 const logger = require('morgan');
 const expressJSDocSwagger = require('express-jsdoc-swagger');
 const swaggerOption = require('./config/swaggerConfig');
+const ResponseStruct = require('./middlewares/ResponseStruct');
 
 const app = express();
 
@@ -13,6 +14,9 @@ app.use(cookieParser());
 
 // 載入 swagger
 expressJSDocSwagger(app)(swaggerOption);
+
+// response struct warp
+app.use('/', ResponseStruct);
 
 /**
  * 設定 router

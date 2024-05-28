@@ -2,16 +2,30 @@ const express = require('express');
 
 const router = express.Router();
 
-/* GET home page. */
+/**
+ * @typedef {object} ModelIndex
+ * @property {number} index_key
+ * @property {string} description - 描述
+ */
+
+/**
+ * GET /
+ * @summary index API
+ * @tags Index
+ * @return {allOf|StructSuccess|ResponseGetIndex} 200 - 成功
+ * @return {StructError} 500 - 失敗
+ * @typedef {object} ResponseGetIndex
+ * @property {ModelIndex} data - 資料清單
+ */
 router.get('/', (req, res) => {
     try {
         const data = {
-            title: 'node_slim_devcontainer',
+            index_key: 9,
             description: 'test API',
         };
-        res.status(200).json({ success: true, data });
+        return res.SendSuccess(data);
     } catch (error) {
-        res.status(500).json({ success: false, message: error.message });
+        return res.SendError(error);
     }
 });
 
