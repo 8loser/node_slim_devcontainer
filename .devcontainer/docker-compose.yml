@@ -16,4 +16,5 @@ services:
     command: sleep infinity
 
     env_file:
+      # 要載入的環境變數檔案
       - .env.dev.local
