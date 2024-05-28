@@ -1,3 +1,5 @@
+// eslint 8 才使用 .eslintrc.js
+// eslint 9 好像不使用了
 module.exports = {
     parserOptions: {
         ecmaVersion: 2020,

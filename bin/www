@@ -1,6 +1,11 @@
 #!/usr/bin/env node
 
 /**
+ * 載入 env
+ */
+require('../handler/envLoader')();
+
+/**
  * Module dependencies.
  */
 
